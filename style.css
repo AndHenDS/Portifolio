@@ -1,22 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-:root{
+:root {
 
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0f172a;  
-    --maisEscuro: #0a0f1c;
-    --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
+    /* Destaques (teclas amarelas) */
+    --primaria: #f2c94c;      /* amarelo mostarda */
+    --secundaria: #e0b437;    /* amarelo mais fechado */
+
+    /* Base */
+    --escuro: #2b2b2b;        /* cinza escuro teclado */
+    --maisEscuro: #1f1f1f;    /* fundo profundo */
+
+    /* Texto / superfícies claras */
+    --claro: #f5f5f5;         /* off-white */
+
+    /* Vidro / keycap */
+    --vidro: rgba(255, 255, 255, 0.12);
 
 }
 
@@ -28,40 +35,36 @@ body {
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(43, 43, 43, 0.9);
     width: 100%;
     z-index: 100;
-    padding: 1,5rem;
-
+    padding: 1, 5rem;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 3rem;
-
 }
 
 .menu-link {
     text-decoration: none;
     color: var(--claro);
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
-    padding: 0,5rem 0;
-
+    padding: 0, 5rem 0;
 }
 
-.menu-link::after{
+.menu-link::after {
     content: '';
-    height: 2px;
+    height: 3px;
     width: 0;
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria)) ;
-    transition: width 0.5s ease;
-
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.4s ease;
 }
 
 .menu-link:hover::after {
@@ -79,191 +82,180 @@ body {
 .foto-perfil {
     width: 350px;
     height: 350px;
-    box-shadow: 0 0 20px rgba(79, 70,229, 0.3);
+    box-shadow: 0 0 30px rgba(242, 201, 76, 0.4);
     border-radius: 50%;
-    border: 4px solid var(--vidro);
+    border: 4px solid var(--primaria);
     animation: flutuar 5s ease-in-out infinite;
 }
 
 h1 {
     font-size: 3.5rem;
     color: var(--primaria);
-    font-weight: bold;
+    font-weight: 800;
     margin: 20px;
 }
 
 .cabecalho-sub-titulo {
     font-size: 1.5rem;
-    color: var(--claro);
+    color: #d1d1d1;
 }
 
-.sobre{
+.sobre {
     padding: 6rem 2rem;
-
 }
 
-.sobre-titulo{
+.sobre-titulo {
     font-size: 3rem;
-    color: var(--claro);
+    color: var(--primaria);
     text-align: center;
     margin-bottom: 20px;
-
 }
-.sobre-caixa{
+
+.sobre-caixa {
     padding: 2rem;
-    max-width: 800px;  
-    margin: 0 auto; 
+    max-width: 800px;
+    margin: 0 auto;
     border-radius: 16px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
-
+    background: rgba(60, 60, 60, 0.85);
 }
 
-.sobre-paragrafo{
+.sobre-paragrafo {
     text-align: center;
     font-size: 1.2rem;
-
 }
 
-.projetos{
+.projetos {
     padding: 6rem 2rem;
 }
 
-.projetos-caixa{
+.projetos-caixa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
-.projetos-card{
-    background: rgba(255, 255, 255, 0.05);
+.projetos-card {
+    background: rgba(55, 55, 55, 0.9);
     border-radius: 16px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     border: 1px solid var(--vidro);
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
-
 }
 
-.projetos-titulo{
+.projetos-titulo {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-
+    color: var(--primaria);
 }
 
-.projetos-card:hover{
-    box-shadow: rgba(79, 70,229, 0.2);
-    transform: translateY(-10px) scale(1.03);
-
+.projetos-card:hover {
+    box-shadow: 0 20px 40px rgba(242, 201, 76, 0.45);
+    transform: translateY(-10px) scale(1.04);
 }
 
-.projetos-imagem{
+.projetos-imagem {
     height: 200px;
     width: 100%;
     object-fit: cover;
-
 }
 
-.caixa-textos-projeto{
+.caixa-textos-projeto {
     padding: 1.5rem;
 }
 
-.paragrafo-projetos{
-    color: rgba(226, 232, 240, 0.8);
-    line-height: 1.25rem;
+.paragrafo-projetos {
+    color: #e0e0e0;
+    line-height: 1.35rem;
 }
 
-.info-projetos{
+.info-projetos {
     margin-bottom: 5px;
-
 }
 
-.contatos{
+.contatos {
     padding: 6rem 2rem;
-
 }
 
-.contatos-titulo{
+.contatos-titulo {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-
+    color: var(--primaria);
 }
 
-.formulario-contato{
+.formulario-contato {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
+    background: rgba(55, 55, 55, 0.9);
+    backdrop-filter: blur(6px);
     padding: 2rem;
     border: 1px solid var(--vidro);
     border-radius: 16px;
 }
 
-.campo-form{
+.campo-form {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: #3a3a3a;
     border-radius: 8px;
     color: var(--claro);
     border: 1px solid var(--vidro);
     outline: none;
-
-
 }
 
-.campo-form:focus{
-    border-color: var(--secundaria);
-    box-shadow: 0 0 10px rgba(79, 70,229, 0.3);
+.campo-form:focus {
+    border-color: var(--primaria);
+    box-shadow: 0 0 12px rgba(242, 201, 76, 0.5);
 }
 
-.grupo-form{
+.grupo-form {
     margin-bottom: 1.5rem;
-
 }
 
 .botao-form {
-    color: var(--claro);
+    color: #2b2b2b;
     background: linear-gradient(45deg, var(--primaria), var(--secundaria));
     padding: 1rem 2rem;
     border: none;
     cursor: pointer;
     font-weight: bold;
     width: 100%;
-    transition: all 0.5 ease;
+    transition: all 0.4s ease;
 }
 
-.botao-form:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+.botao-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(242, 201, 76, 0.6);
 }
 
-.particulas{
+.particulas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 1;
     background:
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--primaria) 0%, transparent 20%),
-    var(--maisEscuro);
-
+        radial-gradient(circle at 20% 30%, rgba(242, 201, 76, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(180, 180, 180, 0.15) 0%, transparent 45%),
+        var(--maisEscuro);
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
-    
+
     50% {
         transform: translateY(-20px);
     }

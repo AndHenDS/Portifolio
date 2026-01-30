@@ -33,8 +33,8 @@
         </ul>
     </nav>
 
-    <main id="Início" class="cabecalho">
-        <img src="./img/andré.jpeg" alt="Foto de André Henrique" class="foto-perfil" />
+    <main id="inicio" class="cabecalho">
+        <img src="./img/perfil.png" alt="Foto de André Henrique" class="foto-perfil" />
         <h1>André Henrique</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Back End</p>
 
@@ -44,10 +44,10 @@
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-                sint eum veniam placeat laboriosam error cupiditate totam voluptatem
-                distinctio quaerat voluptate, a aperiam necessitatibus ipsam ipsa
-                eaque. Aliquid, eveniet doloremque?
+                Estudante de Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento e experiência
+                prática em projetos pessoais utilizando tecnologias web e bancos de dados relacionais. Busca
+                oportunidade de estágio em TI para aplicar conhecimentos técnicos, evoluir profissionalmente e
+                contribuir em ambientes corporativos estruturados.
             </p>
         </div>
     </section>
@@ -58,24 +58,24 @@
             <div class="projetos-card">
                 <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem" />
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Loja de Carros</h3>
-                    <p class="paragrafo-projetos">Loja virtual moderna</p>
+                    <h3 class="info-projetos">SOS Serpentes</h3>
+                    <p class="paragrafo-projetos">Uma enciclopédia digital sobre as serpentes brasileiras mais ameaçadas de extinção.</p>
                 </div>
             </div>
 
             <div class="projetos-card">
                 <img src="./img/projeto2.png" alt="Projeto 2" class="projetos-imagem" />
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">pagina de viagens</h3>
-                    <p class="paragrafo-projetos">Loja virtual moderna</p>
+                    <h3 class="info-projetos">Tela de login</h3>
+                    <p class="paragrafo-projetos">Este é um projeto simples de uma tela de login, feito para praticar HTML, CSS e JavaScript.</p>
                 </div>
             </div>
 
             <div class="projetos-card">
                 <img src="./img/projeto3.png" alt="Projeto 2" class="projetos-imagem" />
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Pagina em teste</h3>
-                    <p class="paragrafo-projetos">Loja virtual moderna</p>
+                    <h3 class="info-projetos">Meu portifólio</h3>
+                    <p class="paragrafo-projetos">Portfólio pessoal criado para apresentar meus projetos, habilidades e minha evolução como desenvolvedor.</p>
                 </div>
             </div>
         </div>
@@ -83,18 +83,21 @@
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
-        <form class="formulario-contato" id="formulario">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsapp(event)">
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
 
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
             </div>
-            
+
             <button type="submit" class="botao-form">Enviar Whatsapp</button>
         </form>
     </section>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
